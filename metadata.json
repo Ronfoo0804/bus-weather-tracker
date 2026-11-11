@@ -1,0 +1,8 @@
+{
+  "name": "Stop 04121 Bus & Weather Live Feed",
+  "description": "Live bus arrivals for stop 04121, NEA 2-hour weather forecast, and RSS 2.0 feed for Zapier automation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
