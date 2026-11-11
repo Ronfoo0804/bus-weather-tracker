@@ -26,9 +26,11 @@ interface ServiceArrival {
 interface WeatherData {
   ok: boolean;
   source: string;
+  endpoint?: string;
   area?: string;
   forecast?: string;
   period?: string;
+  periodText?: string | null;
   status?: number;
   error?: string;
 }
@@ -248,6 +250,15 @@ export default function App() {
                       City: <strong className="text-white">{weather.forecast}</strong>
                     </span>
                     <span className="text-xs text-slate-400 font-normal">({weather.period})</span>
+                    <a
+                      href="/api/nea"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="ml-1 text-[10px] text-cyan-400 hover:text-cyan-300 bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-800/50"
+                      title="Inspect NEA v2 Serverless API Endpoint"
+                    >
+                      NEA v2 Live
+                    </a>
                   </span>
                 )}
               </div>

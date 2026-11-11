@@ -9,6 +9,7 @@ import feedHandler from './api/feed.js';
 import busHandler from './api/bus.js';
 import healthHandler from './api/health.js';
 import weatherHandler from './api/weather.js';
+import neaHandler from './api/nea.js';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ async function startServer() {
   app.get('/api/feed', feedHandler);
   app.get('/api/bus', busHandler);
   app.get('/api/weather', weatherHandler);
+  app.get('/api/nea', neaHandler);
   app.get('/api/health', healthHandler);
 
   if (process.env.NODE_ENV === 'production') {
